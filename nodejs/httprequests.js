@@ -1,3 +1,12 @@
 var http = require('http');
 
-http.get();
+var uri = process.argv[2];
+
+http.get(uri, function(response){
+    
+    response.setEncoding("utf8");
+    response.on("data", function(chunk){
+        console.log(chunk);
+    });
+    
+});

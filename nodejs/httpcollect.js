@@ -1,6 +1,6 @@
 var http = require('http');
 
-var uri = process.argv[2];;
+var uri = process.argv[2];
 
 http.get(uri, function(response){
     
